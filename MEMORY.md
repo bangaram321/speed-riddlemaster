@@ -27,6 +27,8 @@ Living record of what we're learning, key takeaways, progress and decisions. Rea
   - Bug found + fixed during this work: a stray backspace char (0x08) had replaced `\b` in a regex in game.js (a bash/node escaping accident) so `?playtest` silently did nothing; caught by checking the ribbon in the browser. Lesson: after patching code via shell/node scripts, grep for control characters and verify the feature in the browser.
   - Browser-pane gotcha: other file previews open as extra tabs and background tabs pause `requestAnimationFrame` (timer froze) → select the game tab before timing tests.
 
+- [2026-11-06] Session 1 (cont. 3): **published to GitHub.** Public repo https://github.com/bangaram321/speed-riddlemaster (account `bangaram321`, branch `main`). GitHub Pages is on (deploy from `main`, root); a root `index.html` redirects to the game. **Playable link: https://bangaram321.github.io/speed-riddlemaster/** (verified live: loads, 59 riddles, timer runs, no console errors). Repo made public at Danyal's request; the riddle-wording licensing check from the PRD still applies. GitHub CLI isn't installed; I created the repo through the signed-in browser and pushed with plain `git`. Local git identity is set per-repo (not global).
+
 ## Decisions (made in PRD draft; confirm with Danyal)
 - Wrong answer or timeout both cost exactly 1 life; the riddle is spent and the game moves on (no retry on the same riddle).
 - Riddles drawn from a curated JSON bank (target ≥100, min 60 for launch); no live LLM generation at play time. LLM-assisted additions only post-launch and human-reviewed.
