@@ -1,0 +1,8 @@
+# local tooling / editor
+.claude/
+node_modules/
+.DS_Store
+Thumbs.db
+
+# real playtest exports contain players' typed answers: keep them out of git
+speed-riddlemaster/playtest/session-*.json

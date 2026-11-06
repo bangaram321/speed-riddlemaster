@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 660">
+  <defs>
+    <linearGradient id="coat" x1="0" y1="0" x2="1" y2="0.2">
+      <stop offset="0" stop-color="#1c2a3a"/><stop offset=".55" stop-color="#0d141e"/><stop offset="1" stop-color="#05080d"/>
+    </linearGradient>
+    <linearGradient id="coat2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#18222f"/><stop offset="1" stop-color="#070b11"/>
+    </linearGradient>
+    <linearGradient id="hat" x1="0" y1="0" x2="1" y2="0.4"><stop offset="0" stop-color="#2a2f36"/><stop offset=".5" stop-color="#10141a"/><stop offset="1" stop-color="#06080c"/></linearGradient>
+    <radialGradient id="glass" cx=".38" cy=".35" r=".8">
+      <stop offset="0" stop-color="#fff3cf" stop-opacity=".85"/><stop offset=".5" stop-color="#ffd98a" stop-opacity=".35"/><stop offset="1" stop-color="#e9a948" stop-opacity=".18"/>
+    </radialGradient>
+    <radialGradient id="glow"><stop offset="0" stop-color="#ffd98a" stop-opacity=".6"/><stop offset="1" stop-color="#ffd98a" stop-opacity="0"/></radialGradient>
+    <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency=".03 .05" numOctaves="3" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+
+  <!-- ground shadow + puddle glow -->
+  <ellipse cx="236" cy="636" rx="150" ry="14" fill="#000" opacity=".55" filter="url(#soft)"/>
+  <ellipse cx="400" cy="200" rx="120" ry="120" fill="url(#glow)"/>
+
+  <g filter="url(#rough)">
+    <!-- trailing coat tail (wind) -->
+    <path d="M118 440 C96 500 70 560 40 600 C80 585 120 575 150 560 Z" fill="url(#coat2)"/>
+
+    <!-- legs -->
+    <path d="M168 470 L152 600 L196 600 L224 480 Z" fill="#0a0e15"/>
+    <path d="M240 475 L262 600 L308 596 L290 470 Z" fill="#06090e"/>
+    <!-- shoes -->
+    <path d="M146 598 C150 620 168 630 196 628 L214 626 C212 612 204 604 196 600 Z" fill="#05070b"/>
+    <path d="M256 596 C258 616 280 628 314 626 L336 622 C330 608 320 598 308 596 Z" fill="#05070b"/>
+    <path d="M150 604 C158 612 170 616 190 616" stroke="#e9a948" stroke-width="2.2" fill="none" opacity=".6"/>
+
+    <!-- trench coat body -->
+    <path d="M150 210 C118 270 112 370 98 480 C130 500 200 506 262 504 C310 502 332 492 340 480 C326 380 312 270 282 210 Z" fill="url(#coat)"/>
+    <!-- coat front opening / lapel V -->
+    <path d="M214 214 L206 330 L196 498" stroke="#02040a" stroke-width="5" fill="none"/>
+    <path d="M214 214 L252 288 L224 300 Z" fill="#101a26"/>
+    <path d="M214 214 L172 280 L204 296 Z" fill="#0b121b"/>
+    <!-- belt + buckle -->
+    <path d="M110 372 C170 384 270 384 326 370 L324 394 C270 408 170 408 112 396 Z" fill="#05080d"/>
+    <rect x="198" y="376" width="22" height="22" rx="3" fill="#7a5a22" stroke="#e9a948" stroke-width="2"/>
+    <!-- buttons -->
+    <circle cx="206" cy="270" r="4" fill="#8a6a2a"/><circle cx="204" cy="430" r="4" fill="#8a6a2a"/><circle cx="202" cy="462" r="4" fill="#8a6a2a"/>
+    <!-- coat hem sway -->
+    <path d="M100 484 C150 508 250 512 338 484" stroke="#02040a" stroke-width="6" fill="none"/>
+
+    <!-- left arm in pocket (viewer's left) -->
+    <path d="M150 214 C118 262 106 330 120 394 C132 404 150 404 160 396 C156 340 168 290 186 250 Z" fill="#0e1722"/>
+    <ellipse cx="142" cy="398" rx="22" ry="9" fill="#04060a"/>
+
+    <!-- raised right arm holding the magnifier -->
+    <path d="M276 214 C318 246 346 290 344 336 L318 352 C310 318 292 282 262 256 Z" fill="#0b121b"/>
+    <path d="M326 340 C330 300 338 270 346 250 L368 258 C362 286 358 318 350 350 Z" fill="#0a1019"/>
+    <!-- hand -->
+    <ellipse cx="352" cy="250" rx="17" ry="14" fill="#2a1e17"/>
+
+    <!-- collar (turned up) -->
+    <path d="M152 206 L146 150 L190 178 L214 214 Z" fill="#162231"/>
+    <path d="M282 206 L292 146 L244 176 L214 214 Z" fill="#0a111a"/>
+
+    <!-- face (mostly in shadow) -->
+    <path d="M168 120 C166 168 190 196 214 196 C240 196 262 168 258 120 Z" fill="#1d1510"/>
+    <!-- lit cheek sliver from the lamp -->
+    <path d="M168 124 C168 160 182 186 200 194 C188 170 182 148 184 124 Z" fill="#9a6a3a" opacity=".75"/>
+    <!-- nose -->
+    <path d="M214 134 C222 152 226 160 216 164" stroke="#080605" stroke-width="3" fill="none"/>
+    <!-- eyes: two cheeky glints -->
+    <ellipse cx="196" cy="128" rx="6" ry="3.4" fill="#fff0c4"/><ellipse cx="234" cy="128" rx="6" ry="3.4" fill="#fff0c4"/>
+    <circle cx="198" cy="128" r="1.9" fill="#050403"/><circle cx="236" cy="128" r="1.9" fill="#050403"/>
+    <!-- raised brow + smirk -->
+    <path d="M186 118 Q196 112 206 118" stroke="#050403" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+    <path d="M224 114 Q236 106 246 116" stroke="#050403" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+    <path d="M204 170 Q222 180 242 164" stroke="#050403" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+    <!-- pipe -->
+    <path d="M240 168 L274 178" stroke="#2a1a0e" stroke-width="5" stroke-linecap="round"/>
+    <path d="M272 172 C284 168 292 176 288 188 C282 194 272 190 272 182 Z" fill="#2a1a0e"/>
+    <circle cx="284" cy="170" r="3" fill="#ff8a3a"/>
+    <path d="M286 160 C292 148 284 140 292 128" stroke="#9fb4c0" stroke-width="3" fill="none" opacity=".4" stroke-linecap="round"/>
+
+    <!-- fedora -->
+    <ellipse cx="214" cy="96" rx="104" ry="19" transform="rotate(-5 214 96)" fill="url(#hat)"/>
+    <path d="M150 92 C146 44 170 20 214 20 C256 20 282 44 278 92 C250 104 178 104 150 92 Z" fill="url(#hat)"/>
+    <path d="M184 36 C200 52 232 52 248 36" stroke="#000" stroke-opacity=".5" stroke-width="5" fill="none"/>
+    <path d="M150 86 C180 100 252 100 278 86 L278 74 C250 88 178 88 150 74 Z" fill="#8c231c"/>
+    <path d="M110 82 C140 92 170 94 190 96" stroke="#000" stroke-opacity=".5" stroke-width="3" fill="none"/>
+
+    <!-- rim light (lamp from the left) -->
+    <g fill="none" stroke="#f0b455" stroke-linecap="round" opacity=".85">
+      <path d="M112 84 C140 92 160 94 184 96" stroke-width="3"/>
+      <path d="M150 90 C146 52 160 28 190 22" stroke-width="3.5"/>
+      <path d="M150 210 C120 268 112 372 100 478" stroke-width="3.5"/>
+      <path d="M146 154 L152 206" stroke-width="3"/>
+      <path d="M152 600 C150 610 156 622 172 628" stroke-width="2.5"/>
+      <path d="M168 472 L156 596" stroke-width="2.5"/>
+      <path d="M118 440 C98 498 70 556 44 596" stroke-width="2.5" opacity=".7"/>
+    </g>
+  </g>
+
+  <!-- magnifying glass -->
+  <g>
+    <path d="M370 212 L334 252" stroke="#2a1a0c" stroke-width="12" stroke-linecap="round"/>
+    <path d="M370 212 L334 252" stroke="#7a5a22" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    <circle cx="412" cy="168" r="62" fill="url(#glass)"/>
+    <circle cx="412" cy="168" r="62" fill="none" stroke="#1a1208" stroke-width="13"/>
+    <circle cx="412" cy="168" r="62" fill="none" stroke="#e9a948" stroke-width="4"/>
+    <path d="M372 150 C378 124 398 108 422 106" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/>
+    <path d="M386 192 C396 202 410 206 424 202" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".35"/>
+    <!-- a tiny sparkle -->
+    <path d="M456 126 l4 -12 l4 12 l12 4 l-12 4 l-4 12 l-4 -12 l-12 -4 z" fill="#fff6d6" opacity=".9"/>
+  </g>
+</svg>
